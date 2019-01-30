@@ -1,41 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PagesService } from '../../pages.service';
+import { PagesService } from '../../jobs.service';
 import { PageModel } from '../../../../../models/PageModel';
 
 @Component({
   selector: 'page-listing',
-  templateUrl: './page-listing.component.html',
-  styleUrls: ['./page-listing.component.css']
+  templateUrl: './page-listing.component.html'
 })
-export class PageListingComponent implements OnInit {
+export class JobListingComponent implements OnInit {
 
-  public pages:PageModel[];
+  public jobs:JobModel[];
   public siteRef:string;
 
   constructor(
     protected activeRoute:ActivatedRoute,
-    protected pageService:PagesService
+    protected jobService:JobsService
   ) {}
 
   ngOnInit() {
     this.activeRoute.params.subscribe((params)=>{
       this.siteRef = params['siteRef'];
-      this.getPages();
+      this.getJobs();
       // response
     });
   }
   
-  private getPages(){
-    this.pageService.getPages(this.siteRef).subscribe((pages)=>{
-      this.pages = pages;
+  private getJobs(){
+    this.jobService.getJobs(this.siteRef).subscribe((jobs)=>{
+      this.jobs = jobs;
     });
   }
 
-  private removePage(ref)
+  private removeJob(ref)
   {
-    this.pageService.removePage(ref).subscribe((pages)=>{
-      this.getPages();
+    this.jobService.removeJob(ref).subscribe((jobs)=>{
+      this.getJobs();
     });
   }
 }

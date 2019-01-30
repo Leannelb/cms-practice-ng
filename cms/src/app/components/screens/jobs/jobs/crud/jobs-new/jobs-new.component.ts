@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { PageModel } from '../../../../../models/PageModel';
-import { PagesService } from '../../pages.service';
+import { JobModel } from '../../../../../models/jobModel';
+import { JobsService } from '../../jobs.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'page-new',
-  templateUrl: './page-new.component.html',
-  styleUrls: ['./page-new.component.css']
+  selector: 'job-new',
+  templateUrl: './job-new.component.html',
+  styleUrls: ['./job-new.component.css']
 })
-export class PageNewComponent implements OnInit {
+export class JobNewComponent implements OnInit {
   
-  protected pagePost: PageModel;
+  protected jobPost: JobModel;
   private siteRef:string;
   
   
@@ -23,7 +23,7 @@ export class PageNewComponent implements OnInit {
     spellcheck: true,
     height: '15rem',
     minHeight: '5rem',
-    placeholder: 'Add content of your page here',
+    placeholder: 'Add content of your job here',
     translate: 'no',
   };
 
@@ -37,7 +37,7 @@ export class PageNewComponent implements OnInit {
   });
 
 
-  constructor(private pageService:PagesService,protected activatedRoute:ActivatedRoute,protected router:Router) { }
+  constructor(private jobService:JobsService,protected activatedRoute:ActivatedRoute,protected router:Router) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params)=>{
@@ -45,10 +45,10 @@ export class PageNewComponent implements OnInit {
     })
   }
 
-  public createPage(post: PageModel) {
-    return this.pageService.createPage(post).subscribe(response => {
+  public createJob(post: JobModel) {
+    return this.jobService.createJob(post).subscribe(response => {
       // alert('ok');
-      this.router.navigate(['/pages/listing',this.siteRef]);
+      this.router.navigate(['/jobs/listing',this.siteRef]);
       console.log(response);
     },
       error => {
@@ -87,6 +87,6 @@ export class PageNewComponent implements OnInit {
       site_ref   : this.siteRef
     };
 
-    return this.createPage(post);
+    return this.createJob(post);
   }
 }

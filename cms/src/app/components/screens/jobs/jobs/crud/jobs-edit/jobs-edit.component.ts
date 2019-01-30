@@ -2,25 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PropertyModel } from '../../../../../models/PropertyModel';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
-import { PagesService } from '../../pages.service';
-import { PageModel } from '../../../../../models/PageModel';
+import { jobsService } from '../../jobs.service';
+import { jobModel } from '../../../../../models/jobModel';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
-  selector: 'page-edit',
-  templateUrl: './page-edit.component.html',
-  styleUrls: ['./page-edit.component.css']
+  selector: 'job-edit',
+  templateUrl: './job-edit.component.html',
+  styleUrls: ['./job-edit.component.css']
 })
-export class PageEditComponent implements OnInit {
-  page:PageModel;
-  pageRef:string;
+export class JobEditComponent implements OnInit {
+  job:JobModel;
+  jobRef:string;
 
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
     height: '15rem',
     minHeight: '5rem',
-    placeholder: 'Add content of your page here',
+    placeholder: 'Add content of your job here',
     translate: 'no',
   };
 
@@ -37,16 +37,16 @@ export class PageEditComponent implements OnInit {
 
   constructor(
     protected route: ActivatedRoute, 
-    private pagesService: PagesService, 
+    private jobsService: JobsService, 
     private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
-      this.pageRef = params['pageRef'];
-      if(this.pageRef != null){
-        this.pagesService.getPage(this.pageRef).subscribe(page=>{
-          this.page = page;
-          this.updateFormValues(page);
+      this.jobRef = params['jobRef'];
+      if(this.jobRef != null){
+        this.jobsService.getJob(this.jobRef).subscribe(job=>{
+          this.job = job;
+          this.updateFormValues(job);
         });
       }
     });
@@ -62,12 +62,12 @@ export class PageEditComponent implements OnInit {
         slug: this.form.value.slug,
         meta_keywords: this.form.value.meta_keywords,
         meta_description: this.form.value.meta_description,
-        ref: this.pageRef,
+        ref: this.jobRef,
         image:this.form.value.image
       };
 
-      this.pagesService.updatePage(post).subscribe((response) => {
-        this.router.navigate(['/pages/listing',this.page.site_ref]);
+      this.jobsService.updateJob(post).subscribe((response) => {
+        this.router.navigate(['/jobs/listing',this.job.site_ref]);
       }, (error) => {});
     }
   }
@@ -86,7 +86,7 @@ export class PageEditComponent implements OnInit {
     
   }
 
-  protected updateFormValues(response:PageModel) {
+  protected updateFormValues(response:jobModel) {
     this.form.get('title').setValue(response.title);
     this.form.get('htmlContent').setValue(response.content);
     this.form.get('status').setValue(response.status);
