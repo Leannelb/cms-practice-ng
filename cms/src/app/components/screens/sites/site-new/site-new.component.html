@@ -1,0 +1,68 @@
+<div class="page-content">
+  <!-- BEGIN PAGE HEADER-->
+
+  <!-- END PAGE HEADER-->
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- BEGIN EXAMPLE TABLE PORTLET-->
+      <div class="portlet light ">
+        <div class="portlet-title">
+          <div class="caption font-dark">
+            <i class="icon-settings font-dark"></i>
+            <span class="caption-subject bold uppercase">Create Site</span>
+          </div>
+          <div class="actions">
+            <div class="btn-group btn-group-devided" data-toggle="buttons">
+              <a [routerLink]="['/sites/new']" class="btn btn-transparent green-seagreen btn-outline btn-circle btn-sm" id="sample_1_option_1"
+                data-action="6">
+                <i class="fa fa-plus"></i> Add New</a>
+            </div>
+          </div>
+        </div>
+        <div class="portlet-body">
+          <form [formGroup]="form" class="form" (ngSubmit)="onFormSubmit()">
+            <div class="form-group">
+                <label>Name: </label>
+                <input type="text" class="form-control" formControlName="name">
+
+                <div *ngIf="form.controls['name'].touched">
+                  <div *ngIf="form.controls['name'].hasError('required')" class="alert alert-danger">
+                    Please enter a name
+                  </div>
+  
+                  <div *ngIf="form.controls['name'].hasError('minLength')" class="alert alert-danger">
+                    Please enter a name of at least 2 characters
+                  </div>
+  
+                  <div *ngIf="form.controls['name'].hasError('maxLength')" class="alert alert-danger">
+                    Please enter a name no more than 255 characters
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label>Domain: </label>
+              <input type="text" class="form-control" formControlName="domain">
+              <div *ngIf="form.controls['domain'].touched">
+                <div *ngIf="form.controls['domain'].hasError('required')" class="alert alert-danger">
+                  Please enter a domain
+                </div>
+
+                <div *ngIf="form.controls['domain'].hasError('minLength')" class="alert alert-danger">
+                  Please enter a address of at least 2 characters
+                </div>
+
+                <div *ngIf="form.controls['domain'].hasError('maxLength')" class="alert alert-danger">
+                  Please enter a address no more than 255 characters
+                </div>
+              </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Submit</button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

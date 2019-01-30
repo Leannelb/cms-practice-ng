@@ -1,0 +1,108 @@
+<div class="jsc-calendar">
+
+    <main>
+        <div class="toolbar">
+            <div class="calendar-navigation">
+                <div class="btn-group">
+                    <a (click)="previousMonth()" class="btn btn-icon-only btn-default btncalendar-prev-day"><span class="fa fa-caret-left"></span></a>
+                    <a class="btn btn-default">Today</a>
+                    <a (click)="nextMonth()" class="btn btn-icon-only btn-default btncalendar-prev-day"><span class="fa fa-caret-right"></span></a>
+                </div>
+            </div>
+            <div class="current-month">{{currentMonth}} {{currentYear}}</div>
+            <div class="calendar-tools">
+                <div class="btn-group">
+                    <a  class="btn default"     (click)="icalExport()">iCal Export</a>
+                    <a  class="btn yellow-gold" (click)="createBooking()">Create Booking</a>
+                </div>
+            </div>
+        </div>
+        <div class="calendar">
+            <div class="calendar__header">
+                <div>mon</div>
+                <div>tue</div>
+                <div>wed</div>
+                <div>thu</div>
+                <div>fri</div>
+                <div>sat</div>
+                <div>sun</div>
+            </div>
+
+            <div *ngFor="let week of weeks" class="calendar__week" >
+
+                <div *ngFor="let day of week.days" class="calendar__day day" [class.reserved]="day.isReserved" [class.faded]="day.isDisabled" data-toggle="modal" (click)="dayClicked(day)" >
+                
+                  <span class="day">{{day.dayNumber}}</span>
+                  <span class="no-of-bookings" *ngIf="day.events.length > 0">{{day.events.length}}</span>
+                  
+                  <div class="bookings" *ngIf="day.events.length > 0">
+                    <a *ngFor="let event of day.events" class="booking__single tooltips bg-yellow-crusta" data-container="body" data-placement="top" data-original-title="" ></a>
+                  </div>
+                
+                </div>
+
+            </div>
+
+            <!-- <div class="calendar__week">
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails">
+                    <span class="day">1</span>
+                    <span class="no-of-bookings">3</span>
+                    <div class="bookings">
+                        <a href="javascript:void(0);" class="booking__single tooltips bg-yellow-crusta" data-container="body" data-placement="top" data-original-title="something goes here"></a>
+                        <a href="javascript:void(0);" class="booking__single tooltips bg-red" data-container="body" data-placement="top" data-original-title="something else goes here"></a>
+                        <a href="javascript:void(0);" class="booking__single tooltips bg-green-soft" data-container="body" data-placement="top" data-original-title="another example"></a>
+                    </div>
+                </div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">2</span></div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">3</span></div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">4</span></div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">5</span></div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">6</span></div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">7</span></div>
+            </div>
+            <div class="calendar__week">
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">8</span></div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">9</span></div>
+                <div class="calendar__day day highlighted" data-toggle="modal" href="#bookingdetails"><span class="day">10</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">11</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">12</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">13</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">14</span></div>
+            </div>
+            <div class="calendar__week">
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">15</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">16</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">17</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">18</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">19</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">20</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">21</span></div>
+            </div>
+            <div class="calendar__week">
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">22</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">23</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">24</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails">
+                    <span class="day">25</span>
+                    <span class="no-of-bookings">1</span>
+                    <div class="bookings">
+                        <a href="javascript:void(0);" class="booking__single tooltips bg-yellow-crusta" data-container="body" data-placement="top" data-original-title="something goes here"></a>
+                    </div>
+                </div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">26</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">27</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">28</span></div>
+            </div>
+            <div class="calendar__week">
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">29</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">30</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day">31</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day faded">1</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day faded">2</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day faded">3</span></div>
+                <div class="calendar__day day" data-toggle="modal" href="#bookingdetails"><span class="day faded">4</span></div>
+            </div> -->
+        </div>
+    </main>
+
+</div>

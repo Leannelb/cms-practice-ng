@@ -1,0 +1,67 @@
+<div class="page-content">
+  <!-- BEGIN PAGE HEADER-->
+
+  <div class="page-bar">
+    <ul class="page-breadcrumb">
+      <li>
+        <i class="icon-home"></i>
+        <a href="/">Home</a>
+        <i class="fa fa-angle-right"></i>
+      </li>
+      <li>
+        <span>Tables</span>
+      </li>
+    </ul>
+  </div>
+  <!-- END PAGE HEADER-->
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- BEGIN EXAMPLE TABLE PORTLET-->
+      <div class="portlet light ">
+        <div class="portlet-title">
+          <div class="caption font-dark">
+            <i class="icon-settings font-dark"></i>
+            <span class="caption-subject bold uppercase">Page Listing</span>
+          </div>
+          <div class="actions">
+            <div class="btn-group btn-group-devided" data-toggle="buttons">
+              <a [routerLink]="['/pages/new',siteRef]" class="btn btn-transparent green-seagreen btn-outline btn-circle btn-sm" id="sample_1_option_1"
+                data-action="6">
+                <i class="fa fa-plus"></i> Add New</a>
+            </div>
+          </div>
+        </div>
+        <div class="portlet-body">
+          <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_1">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="all">Title</th>
+                <th class="all">Slug</th>
+                <th class="min-phone-l">Status</th>
+                <th class="min-phone-l" colspan="2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr *ngFor="let page of pages">
+                <th></th>
+                <td>{{page.title}}</td>
+                <td>{{page.slug}}</td>
+                <td>{{page.status  | capitalizeFirst}}</td>
+                <td>
+                  <button class="btn btn-primary btn-sm" [routerLink]="['/pages/edit', page.ref]">Edit</button>
+                </td>
+                <td>
+                  <button class="btn btn-primary btn-sm btn-danger" (click)="removePage(page.ref)">Delete</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+  </div>
+</div>

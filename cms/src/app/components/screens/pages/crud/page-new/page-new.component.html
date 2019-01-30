@@ -1,0 +1,106 @@
+
+<div class="page-content">
+    <!-- BEGIN PAGE HEADER-->
+  
+    <!-- END PAGE HEADER-->
+    <div class="row">
+      <div class="col-xs-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet light ">
+          <div class="portlet-title">
+            <div class="caption font-dark">
+              <i class="icon-settings font-dark"></i>
+              <span class="caption-subject bold uppercase">Create New Page Post</span>
+            </div>
+            <div class="actions">
+              <div class="btn-group btn-group-devided" data-toggle="buttons">
+                <!--<a [routerLink]="['new']" class="btn btn-transparent green-seagreen btn-outline btn-circle btn-sm" id="sample_1_option_1"-->
+                   <!--data-action="6">-->
+                  <!--<i class="fa fa-plus"></i> Add New</a>-->
+              </div>
+            </div>
+          </div>
+  
+          <div class="portlet-body">
+            <form [formGroup]="form" class="form" (ngSubmit)="onFormSubmit()" #formDir="ngForm">
+  
+              <div class="form-group">
+                <label>Title: </label>
+                <input type="text" class="form-control" formControlName="title">
+                <div *ngIf="form.controls['title'].touched">
+                  <div *ngIf="form.controls['title'].hasError('required') && (form.controls['title'].dirty || form.controls['title'].touched || formDir.submitted)" class="alert alert-danger">
+                    Please add a title
+                  </div>
+  
+                  <div *ngIf="form.controls['title'].hasError('minLength') && (form.controls['title'].dirty || form.controls['title'].touched || formDir.submitted)" class="alert alert-danger">
+                    Title has to be at least 2 character  long
+                  </div>
+  
+                  <div *ngIf="form.controls['title'].hasError('maxLength') && (form.controls['title'].dirty || form.controls['title'].touched || formDir.submitted)" class="alert alert-danger">
+                    Title cannot exceed 255 characters
+                  </div>
+                </div>
+              </div>
+  
+            
+              <div class="form-group">
+                 <label>Status: </label>
+                 <select class="form-control" formControlName="status">
+                    <option value="published">Published</option>
+                    <option value="pending">Pending</option>
+                 </select>
+                  <div *ngIf="form.controls['title'].touched">
+                    <div *ngIf="form.controls['title'].hasError('required') && (form.controls['title'].dirty || form.controls['title'].touched || formDir.submitted)" class="alert alert-danger">
+                      Please add a title
+                    </div>
+    
+                    <div *ngIf="form.controls['title'].hasError('minLength') && (form.controls['title'].dirty || form.controls['title'].touched || formDir.submitted)" class="alert alert-danger">
+                      Title has to be at least 2 character  long
+                    </div>
+    
+                    <div *ngIf="form.controls['title'].hasError('maxLength') && (form.controls['title'].dirty || form.controls['title'].touched || formDir.submitted)" class="alert alert-danger">
+                      Title cannot exceed 255 characters
+                    </div>
+                  </div>
+                </div>
+
+              <div class="form-group">
+                  <label>Page Content: </label>
+  
+                  <angular-editor formControlName="htmlContent" [config]="config"></angular-editor>
+  
+                  <div *ngIf="form.controls['htmlContent'].hasError('maxLength') && (form.controls['htmlContent'].dirty || form.controls['htmlContent'].touched || formDir.submitted)" class="alert alert-danger">
+                    Content cannot be longer than 64000 characters
+                  </div>
+  
+                  <div *ngIf="form.controls['htmlContent'].hasError('required') && (form.controls['htmlContent'].dirty || form.controls['htmlContent'].touched || formDir.submitted)" class="alert alert-danger">
+                    Content is required
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                  <label>Image:</label>
+                  <input type="file" class="form-control" (change)="onFileChange($event,'image')" accept="image/*"/>
+                  <div *ngIf="form.controls['image'].hasError('required')  && (form.controls['image'].dirty || form.controls['image'].touched || formDir.submitted)" class="alert alert-danger">
+                      Image is required
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                <label>Meta - Keywords: </label>
+                <input type="text" class="form-control" placeholder="enter optional keywords" formControlName="meta_keywords">
+              </div>
+  
+              <div class="form-group">
+                <label>Meta - Description: </label>
+                <textarea rows="4" class="form-control" placeholder="enter optional description" formControlName="meta_description"></textarea>
+              </div>
+              
+              <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+            </form>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  

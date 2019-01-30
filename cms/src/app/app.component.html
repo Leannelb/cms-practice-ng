@@ -1,0 +1,30 @@
+<ngx-loading-bar></ngx-loading-bar>
+<app-login  *ngIf="!auth"></app-login>
+
+<!-- to hide logo when menu is closed use class in body "page-sidebar-closed-hide-logo" -->
+<div class="page-header-fixed page-container-bg-solid" *ngIf="auth">
+    <!-- BEGIN HEADER -->
+    <app-navigation></app-navigation>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <app-sidebar></app-sidebar>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <router-outlet></router-outlet>
+            <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+        <app-quick-sidebar></app-quick-sidebar>
+        <!-- END QUICK SIDEBAR -->
+    </div>
+    <!-- END CONTAINER -->
+    <app-footer></app-footer>
+
+<alert-modal></alert-modal>

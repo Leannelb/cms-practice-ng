@@ -1,0 +1,19 @@
+Vent to Washify
+
+Class changes:
+red-thunderbird => green-sharp
+
+
+File changes:
+logo_email.png
+favicon.ico
+/assets/layouts/layout/img/logo-lockscreen.png/assets/layouts/layout/img/logo-lockscreen@2x.png/assets/layouts/layout/img/logo.png/assets/layouts/layout/img/logo@2x.png/assets/layouts/layout/img/logo@4x.png
+
+/assets/global/css/components.css
+/assets/layouts/layout/css/themes/dark.css
+/assets/layouts/layout/css/custom.css
+
+email_template.html
+email_template-plain.html
+
+

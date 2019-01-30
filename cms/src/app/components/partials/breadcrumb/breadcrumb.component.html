@@ -1,0 +1,28 @@
+<div class="page-bar">
+  <ul class="page-breadcrumb">
+      <li>
+          <i class="icon-home"></i>
+          <a href="/">Home</a>
+          <i class="fa fa-angle-right"></i>
+      </li>
+      <li>
+          <span>Current - {{title}}</span>
+      </li>
+  </ul>
+
+
+  <div class="page-toolbar" *ngIf="hasActions">
+        <div class="btn-group pull-right">
+            <button type="button" class="btn btn-fit-height green-seagreen dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true"> Filters
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu pull-right" role="menu">
+                <li>
+                    <a href="#">
+                        <i class="icon-bell"></i> Show Live only [demo]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

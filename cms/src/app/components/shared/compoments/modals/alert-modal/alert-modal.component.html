@@ -1,0 +1,40 @@
+<!-- The Modal -->
+<div class="modal" [style.display]="modalShown ? 'block' : 'none' ">
+  <div class="modal-dialog" role="document">
+
+
+    <!-- Modal content -->
+    <div class="modal-container">
+      
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <button (click)="closeModal()" class="close modal-close-button" type="button" style="margin-top:-20px">×</button>
+          <h4 class="modal-title">{{title}}</h4>
+        </div>
+        
+        <div class="modal-body">
+          
+          <div class="form-group" *ngIf="messages.length > 1">
+            <ul>
+              <li *ngFor="let msg of messages">{{msg}}</li>
+            </ul>
+          </div>
+
+          <div ng-if="messages.length == 1">
+            <p>{{messages[0]}}</p>
+          </div>
+          
+        </div>
+
+
+        <div class="modal-footer">
+          <button class="btn btn-default" (click)="closeModal()">Close</button>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
