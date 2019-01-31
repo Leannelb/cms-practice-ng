@@ -1,4 +1,4 @@
-export interface PageModel {
+export interface JobModel {
   title?: string,
   content?: string;
   ref?: string;

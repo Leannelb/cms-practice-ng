@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { PropertyModel } from '../../../../../models/PropertyModel';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
-import { jobsService } from '../../jobs.service';
-import { jobModel } from '../../../../../models/jobModel';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { JobModel } from 'src/app/models/JobModel';
+import { JobsService } from '../../jobs.service';
 
 @Component({
   selector: 'job-edit',
@@ -41,15 +40,15 @@ export class JobEditComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.route.params.subscribe((params) => {
-      this.jobRef = params['jobRef'];
-      if(this.jobRef != null){
-        this.jobsService.getJob(this.jobRef).subscribe(job=>{
-          this.job = job;
-          this.updateFormValues(job);
-        });
-      }
-    });
+    // this.route.params.subscribe((params) => {
+    //   this.jobRef = params['jobRef'];
+    //   if(this.jobRef != null){
+    //     this.jobsService.getJob(this.jobRef).subscribe(job=>{
+    //       this.job = job;
+    //       this.updateFormValues(job);
+    //     });
+    //   }
+    // });
   }
 
   public onFormSubmit(event) {
@@ -66,9 +65,9 @@ export class JobEditComponent implements OnInit {
         image:this.form.value.image
       };
 
-      this.jobsService.updateJob(post).subscribe((response) => {
-        this.router.navigate(['/jobs/listing',this.job.site_ref]);
-      }, (error) => {});
+      // this.jobsService.updateJob(post).subscribe((response) => {
+      //   this.router.navigate(['/jobs/listing',this.job.site_ref]);
+      // }, (error) => {});
     }
   }
 
@@ -86,14 +85,14 @@ export class JobEditComponent implements OnInit {
     
   }
 
-  protected updateFormValues(response:jobModel) {
-    this.form.get('title').setValue(response.title);
-    this.form.get('htmlContent').setValue(response.content);
-    this.form.get('status').setValue(response.status);
-    this.form.get('slug').setValue(response.slug);
-    this.form.get('meta_keywords').setValue(response.meta_keywords);
-    this.form.get('meta_description').setValue(response.meta_description);
-  }
+  // protected updateFormValues(response:jobModel) {
+  //   this.form.get('title').setValue(response.title);
+  //   this.form.get('htmlContent').setValue(response.content);
+  //   this.form.get('status').setValue(response.status);
+  //   this.form.get('slug').setValue(response.slug);
+  //   this.form.get('meta_keywords').setValue(response.meta_keywords);
+  //   this.form.get('meta_description').setValue(response.meta_description);
+  // }
 
 }
  

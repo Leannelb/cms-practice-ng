@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { JobModel } from '../../../../../models/jobModel';
+// import { JobModel } from '../../../../../models/jobModel';
 import { JobsService } from '../../jobs.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { JobModel } from '../../../../../../models/JobModel';
 
 @Component({
   selector: 'job-new',
@@ -46,15 +47,15 @@ export class JobNewComponent implements OnInit {
   }
 
   public createJob(post: JobModel) {
-    return this.jobService.createJob(post).subscribe(response => {
-      // alert('ok');
-      this.router.navigate(['/jobs/listing',this.siteRef]);
-      console.log(response);
-    },
-      error => {
-      // alert('error');
-        console.log(error);
-      });
+    // return this.jobService.createJob(post).subscribe(response => {
+    //   // alert('ok');
+    //   this.router.navigate(['/jobs/listing',this.siteRef]);
+    // //   console.log(response);
+    // },
+    //   error => {
+    //   // alert('error');
+    //     console.log(error);
+    //   });
   }
 
 

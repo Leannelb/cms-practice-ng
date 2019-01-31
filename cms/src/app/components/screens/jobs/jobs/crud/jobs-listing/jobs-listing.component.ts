@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PagesService } from '../../jobs.service';
-import { PageModel } from '../../../../../models/PageModel';
+import { JobsService } from '../../jobs.service';
+import { JobModel } from 'src/app/models/JobModel';
+// import { JobModel } from '../../../../../models/JobModel';
 
 @Component({
-  selector: 'page-listing',
-  templateUrl: './page-listing.component.html'
+  selector: 'job-listing',
+  templateUrl: './job-listing.component.html'
 })
 export class JobListingComponent implements OnInit {
 
@@ -26,15 +27,15 @@ export class JobListingComponent implements OnInit {
   }
   
   private getJobs(){
-    this.jobService.getJobs(this.siteRef).subscribe((jobs)=>{
-      this.jobs = jobs;
-    });
+    // this.jobService.getJobs(this.siteRef).subscribe((jobs)=>{
+    //   this.jobs = jobs;
+    // });
   }
 
   private removeJob(ref)
   {
-    this.jobService.removeJob(ref).subscribe((jobs)=>{
-      this.getJobs();
-    });
+    // this.jobService.removeJob(ref).subscribe((jobs)=>{
+    //   this.getJobs();
+    // });
   }
 }
