@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CleanersComponent } from './cleaners.component';
+import { RouterModule, Router, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: }
+
+]
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [CleanersComponent]
+  imports: [ RouterModule.forChild(routes)],
+  exports: [ RouterModule],
+  declarations: [CleanersEditComponent]
 })
 export class CleanersModule { }

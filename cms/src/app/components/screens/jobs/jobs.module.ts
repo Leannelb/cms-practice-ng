@@ -7,8 +7,8 @@ import { JobsNewComponent } from './jobs/crud/jobs-new/jobs-new.component';
 
 const routes: Routes = [
   { path: '', component: JobsListingComponent },
-  { path: '/edit', component: JobsEditComponent },
-  { path: '/new', component: JobsEditComponent },
+  { path: 'edit/:ref', component: JobsEditComponent },
+  { path: 'new', component: JobsEditComponent },
 
 
 ]
