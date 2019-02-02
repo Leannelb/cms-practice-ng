@@ -7,11 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { JobModel } from '../../../../../../models/JobModel';
 
 @Component({
-  selector: 'job-new',
-  templateUrl: './job-new.component.html',
-  styleUrls: ['./job-new.component.css']
+  selector: 'jobs-new',
+  templateUrl: './jobs-new.component.html'
 })
-export class JobNewComponent implements OnInit {
+export class JobsNewComponent implements OnInit {
   
   protected jobPost: JobModel;
   private siteRef:string;

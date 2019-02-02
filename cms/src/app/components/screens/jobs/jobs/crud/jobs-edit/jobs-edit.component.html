@@ -22,7 +22,8 @@
         </div>
 
         <div class="portlet-body">
-          <form [formGroup]="form" class="form" (ngSubmit)="onFormSubmit()" #formDir="ngForm" *ngIf="page != null">
+          <form [formGroup]="form" class="form" (ngSubmit)="onFormSubmit()" >
+            <!-- <form [formGroup]="form" class="form" (ngSubmit)="onFormSubmit()" #formDir="ngForm" *ngIf="page != null"> -->
 
             <div class="form-group">
               <label>Title: </label>

@@ -6,11 +6,10 @@ import { JobModel } from 'src/app/models/JobModel';
 import { JobsService } from '../../jobs.service';
 
 @Component({
-  selector: 'job-edit',
-  templateUrl: './job-edit.component.html',
-  styleUrls: ['./job-edit.component.css']
+  selector: 'jobs-edit',
+  templateUrl: './jobs-edit.component.html'
 })
-export class JobEditComponent implements OnInit {
+export class JobsEditComponent implements OnInit {
   job:JobModel;
   jobRef:string;
 

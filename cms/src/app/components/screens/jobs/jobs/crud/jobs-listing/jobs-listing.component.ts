@@ -5,10 +5,10 @@ import { JobModel } from 'src/app/models/JobModel';
 // import { JobModel } from '../../../../../models/JobModel';
 
 @Component({
-  selector: 'job-listing',
-  templateUrl: './job-listing.component.html'
+  selector: 'jobs-listing',
+  templateUrl: './jobs-listing.component.html'
 })
-export class JobListingComponent implements OnInit {
+export class JobsListingComponent implements OnInit {
 
   public jobs:JobModel[];
   public siteRef:string;
