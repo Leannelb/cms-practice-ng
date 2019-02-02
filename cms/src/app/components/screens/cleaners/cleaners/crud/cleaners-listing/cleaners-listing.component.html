@@ -1,200 +1,175 @@
 <!-- BEGIN CONTENT BODY -->
 <div class="page-content">
-  <!-- BEGIN PAGE HEADER-->
-  <h1 class="page-title"> Jobs</h1>
-  <!-- END PAGE HEADER-->
-  <div class="row">
-      <div class="col-md-12">
+    <!-- BEGIN PAGE HEADER-->
+    <h1 class="page-title"> Cleaners</h1>
+    <!-- END PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12">
 
-          <div class="portlet light margin-top-20">
+            <div class="portlet light margin-top-20">
 
-              <div class="portlet-title tabbable-line">
-                  <div class="actions hidden-lg hidden-md hidden-sm" style="width:100%">
-                      <a href="#" class="btn btn-circle btn-icon-only btn-default btn-no-border btncalendar-next-day pull-right"><span class="fa fa-caret-right"></span></a>
-                      <a href="#" class="btn btn-circle btn-icon-only btn-default btn-no-border btncalendar-prev-day pull-left"><span class="fa fa-caret-left"></span></a>
-                  </div>
-                  <div class="clearfix hidden-lg hidden-md hidden-sm"></div>
-                  <div class="caption">
-                      <span class="caption-subject font-dark bold uppercase">Today's Jobs</span>
-                  </div>
-                  <div class="tabbable tabbable-tabdrop">
-                      <ul class="nav nav-tabs nav-tabs-right">
-                          <li>
-                              <a href="#"> Year </a>
-                          </li>
-                          <li>
-                              <a href="#"> Month </a>
-                          </li>
-                          <li>
-                              <a href="#"> Week </a>
-                          </li>
-                          <li class="active">
-                              <a href="appointmets.html"> Today </a>
-                          </li>
-                          <li class="margin-right-10 hidden-xs"><a href="#" class="btn btn-circle btn-icon-only btn-default btncalendar-next-day"><span class="fa fa-caret-right"></span></a></li>
-                          <li class="margin-right-10 hidden-xs"><a href="#" class="btn btn-circle btn-icon-only btn-default btncalendar-prev-day"><span class="fa fa-caret-left"></span></a></li>
-                      </ul>
-                  </div>
-              </div>
+                <div class="portlet-title">
+                    <div class="caption">
+                        <span class="caption-subject font-dark bold uppercase">All Cleaners</span>
+                    </div>
+                    <div class="actions">
+                        <div class="btn-group">
+                            <a class="btn dark btn-outline btn-circle btn-sm" href="cleaners_map.html" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> View on Map </a>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn dark btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Filter By Availability
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="javascript:;">All Cleaners</a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li>
+                                    <a href="javascript:;">Available</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Unavailable</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-              <div class="portlet-title">
-                  <div class="caption">
-                      <i class="icon-calendar font-green-sharp"></i>
-                      <span class="caption-subject font-green-sharp" id="datetoday"> Tuesday 28th January 2019 </span>
-                  </div>
-                  <div class="actions">
-                      <div class="btn-group">
-                          <a class="btn dark btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Export to CSV </a>
-                      </div>
-                      <div class="btn-group">
-                          <a class="btn dark btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Filter By Job Status
-                              <i class="fa fa-angle-down"></i>
-                          </a>
-                          <ul class="dropdown-menu pull-right">
-                              <li>
-                                  <a href="javascript:;">All Jobs</a>
-                              </li>
-                              <li class="divider"> </li>
-                              <li>
-                                  <a href="javascript:;">Status 1</a>
-                              </li>
-                              <li>
-                                  <a href="javascript:;">Status 2</a>
-                              </li>
-                              <li>
-                                  <a href="javascript:;">Status 3</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="portlet-body">
-                  <div class="table-scrollable">
-                      <table class="table table-bordered table-hover">
-                          <thead>
-                              <tr>
-                                  <th> First Name </th>
-                                  <th> Last Name </th>
-                                  <th> Number Plate </th>
-                                  <th> Job Status </th>
-                                  <th> Cleaner Assigned </th>
-                                  <th> Price </th>
-                                  <th> Job Details </th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td> Mark </td>
-                                  <td> Otto </td>
-                                  <td> MRK233 </td>
-                                  <td>
-                                      <span class="label label-sm label-danger"> Status 1 </span>
-                                  </td>
-                                  <td> - </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Larry </td>
-                                  <td> Cooper </td>
-                                  <td> LCR876 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Joseph Bonnici </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Mary </td>
-                                  <td> Saliba </td>
-                                  <td> MRS234 </td>
-                                  <td>
-                                      <span class="label label-sm label-info "> Status 3 </span>
-                                  </td>
-                                  <td> Isaac Bonello </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Elisa </td>
-                                  <td> Calleja </td>
-                                  <td> ELE124 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Adolf Cassar </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Mark </td>
-                                  <td> Otto </td>
-                                  <td> MRK233 </td>
-                                  <td>
-                                      <span class="label label-sm label-danger"> Status 1 </span>
-                                  </td>
-                                  <td> - </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Larry </td>
-                                  <td> Cooper </td>
-                                  <td> LCR876 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Joseph Bonnici </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Mary </td>
-                                  <td> Saliba </td>
-                                  <td> MRS234 </td>
-                                  <td>
-                                      <span class="label label-sm label-info "> Status 3 </span>
-                                  </td>
-                                  <td> Isaac Bonello </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Elisa </td>
-                                  <td> Calleja </td>
-                                  <td> ELE124 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Adolf Cassar </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
-              </div>
-          <!-- END BORDERED TABLE PORTLET-->
-          </div>
-      </div>
-  </div>
+                <div class="portlet-body">
+                    <div class="table-scrollable">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th> First Name </th>
+                                    <th> Last Name </th>
+                                    <th> Current Availability </th>
+                                    <th> Current Jobs </th>
+                                    <th colspan="2"> Availability in Last 24 Hours </th>
+                                    <th> Total Jobs </th>
+                                    <th> Cleaner Details </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> Mark </td>
+                                    <td> Otto </td>
+                                    <td>
+                                        <span class="label label-sm label-danger"> Unavailable </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Larry </td>
+                                    <td> Cooper </td>
+                                    <td>
+                                        <span class="label label-sm label-info"> Available </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Mark </td>
+                                    <td> Otto </td>
+                                    <td>
+                                        <span class="label label-sm label-danger"> Unavailable </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Larry </td>
+                                    <td> Cooper </td>
+                                    <td>
+                                        <span class="label label-sm label-info"> Available </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Mark </td>
+                                    <td> Otto </td>
+                                    <td>
+                                        <span class="label label-sm label-danger"> Unavailable </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Larry </td>
+                                    <td> Cooper </td>
+                                    <td>
+                                        <span class="label label-sm label-info"> Available </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Mark </td>
+                                    <td> Otto </td>
+                                    <td>
+                                        <span class="label label-sm label-danger"> Unavailable </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Larry </td>
+                                    <td> Cooper </td>
+                                    <td>
+                                        <span class="label label-sm label-info"> Available </span>
+                                    </td>
+                                    <td> 3 </td>
+                                    <td> 60 min available </td>
+                                    <td> 20 min unavailable </td>
+                                    <td> 10 </td>
+                                    <td>
+                                        <a href="cleaners_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <!-- END BORDERED TABLE PORTLET-->
+            </div>
+        </div>
+    </div>
 </div>
 <!-- END CONTENT BODY -->

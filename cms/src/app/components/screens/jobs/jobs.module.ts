@@ -1,6 +1,4 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';import { Routes, RouterModule } from '@angular/router';
 import { JobsListingComponent } from './jobs/crud/jobs-listing/jobs-listing.component';
 import { JobsEditComponent } from './jobs/crud/jobs-edit/jobs-edit.component';
 import { JobsNewComponent } from './jobs/crud/jobs-new/jobs-new.component';
