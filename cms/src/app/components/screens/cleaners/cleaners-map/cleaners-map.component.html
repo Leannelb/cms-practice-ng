@@ -1,3 +1,122 @@
-<p>
-  cleaners-map works!
-</p>
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content">
+  <!-- BEGIN PAGE HEADER-->
+  <h1 class="page-title">Map of Cleaners</h1>
+  <!-- END PAGE HEADER-->
+
+  <div class="row">
+    <div class="col-lg-8 col-xs-12 col-sm-12">
+      <!-- BEGIN Portlet PORTLET-->
+      <div class="portlet light">
+        <div class="portlet-title ">
+          <div class="caption">
+            <span class="caption-subject font-dark bold uppercase"
+              >Name's Jobs</span
+            >
+          </div>
+        </div>
+        <div class="portlet-body">
+          <div id="gmap_marker" class="padding-b-40">
+              <div #gmap style="width:100%;height:400px"></div>
+              <div class="col-sm-12 col-xs-12">
+                <button (click)="setMapType($event,'terrain')" class="btn btn-primary">Terrain</button>
+                <button (click)="setMapType($event,'satellite')" class="btn btn-danger">Satellite</button>
+                <button (click)="setMapType($event,'roadmap')" class="btn btn-warning">Road Map</button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Portlet PORTLET-->
+    </div>
+    <div class="col-lg-4 col-xs-12 col-sm-12">
+      <!-- BEGIN Portlet PORTLET-->
+      <div class="portlet light">
+        <div class="portlet-title tabbable-line">
+          <div class="actions hidden-lg hidden-md hidden-sm" style="width:100%">
+            <a
+              href="#"
+              class="btn btn-circle btn-icon-only btn-default btn-no-border btncalendar-next-day pull-right"
+              ><span class="fa fa-caret-right"></span
+            ></a>
+            <a
+              href="#"
+              class="btn btn-circle btn-icon-only btn-default btn-no-border btncalendar-prev-day pull-left"
+              ><span class="fa fa-caret-left"></span
+            ></a>
+          </div>
+          <div class="clearfix hidden-lg hidden-md hidden-sm"></div>
+          <div class="caption">
+            <span class="caption-subject font-dark bold uppercase"
+              >Joseph's Current Jobs</span
+            >
+          </div>
+        </div>
+        <div class="portlet-body">
+          <div class="table-scrollable">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Number Plate</th>
+                  <th>Job Details</th>
+                  <th>Cleaner Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MRK233</td>
+                  <td>
+                    <a href="jobs_details.html" class="btn green-sharp btn-xs">
+                      Job Details
+                    </a>
+                  </td>
+                  <td>
+                    <a
+                      href="cleaners_details.html"
+                      class="btn green-sharp btn-xs"
+                    >
+                      Cleaner Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>MRK233</td>
+                  <td>
+                    <a href="jobs_details.html" class="btn green-sharp btn-xs">
+                      Job Details
+                    </a>
+                  </td>
+                  <td>
+                    <a
+                      href="cleaners_details.html"
+                      class="btn green-sharp btn-xs"
+                    >
+                      Cleaner Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>MRK233</td>
+                  <td>
+                    <a href="jobs_details.html" class="btn green-sharp btn-xs">
+                      Job Details
+                    </a>
+                  </td>
+                  <td>
+                    <a
+                      href="cleaners_details.html"
+                      class="btn green-sharp btn-xs"
+                    >
+                      Cleaner Details
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- END Portlet PORTLET-->
+    </div>
+  </div>
+</div>
+<!-- END CONTENT BODY -->
