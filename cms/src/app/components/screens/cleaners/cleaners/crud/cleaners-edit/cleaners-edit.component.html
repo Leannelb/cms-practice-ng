@@ -1,210 +1,285 @@
-<!-- BEGIN CONTENT BODY -->
-<div class="page-content">
-  <!-- BEGIN PAGE HEADER-->
-  <h1 class="page-title"> Job Details</h1>
-  <!-- END PAGE HEADER-->
+         <!-- BEGIN CONTENT BODY -->
+         <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <h1 class="page-title"> Cleaner Details</h1>
+            <!-- END PAGE HEADER-->
 
-  <div class="row">
-      <div class="col-xs-12">
-          <!-- BEGIN Portlet PORTLET-->
-          <div class="portlet light">
-              <div class="portlet-title">
-                  <div class="caption font-dark">
-                      <span class="caption-subject bold uppercase"> Name Surname - Number Plate</span>
-                  </div>
-              </div>
-              <div class="portlet-body form">
-                  <!-- BEGIN FORM-->
-                  <form action="#" class="form-horizontal form-row-seperated form-validate">
+            <div class="row widget-row">
+                <div class="col-md-3">
+                    <!-- BEGIN WIDGET THUMB -->
+                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                        <h4 class="widget-thumb-heading">Availability in last 24 hours</h4>
+                        <div class="widget-thumb-wrap">
+                            <i class="widget-thumb-icon bg-green icon-clock"></i>
+                            <div class="widget-thumb-body">
+                                <span class="widget-thumb-body-stat" data-counter="counterup" data-value="60">60</span>
+                                <span class="widget-thumb-subtitle">MINS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END WIDGET THUMB -->
+                </div>
+                <div class="col-md-3">
+                    <!-- BEGIN WIDGET THUMB -->
+                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                        <h4 class="widget-thumb-heading">Unavailability in last 24 hours</h4>
+                        <div class="widget-thumb-wrap">
+                            <i class="widget-thumb-icon bg-red icon-clock"></i>
+                            <div class="widget-thumb-body">
+                                <span class="widget-thumb-body-stat" data-counter="counterup" data-value="20">20</span>
+                                <span class="widget-thumb-subtitle">MINS</span>                                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END WIDGET THUMB -->
+                </div>
+                <div class="col-md-3">
+                    <!-- BEGIN WIDGET THUMB -->
+                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                        <h4 class="widget-thumb-heading">Current Order</h4>
+                        <div class="widget-thumb-wrap">
+                            <i class="widget-thumb-icon bg-purple icon-bar-chart"></i>
+                            <div class="widget-thumb-body">
+                                <span class="widget-thumb-body-stat" data-counter="counterup" data-value="3">3</span>
+                                <span class="widget-thumb-subtitle">ORDERS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END WIDGET THUMB -->
+                </div>
+                <div class="col-md-3">
+                    <!-- BEGIN WIDGET THUMB -->
+                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                        <h4 class="widget-thumb-heading">Total Orders</h4>
+                        <div class="widget-thumb-wrap">
+                            <i class="widget-thumb-icon bg-green-sharp icon-bar-chart"></i>
+                            <div class="widget-thumb-body">
+                                <span class="widget-thumb-body-stat" data-counter="counterup" data-value="100">100</span>
+                                <span class="widget-thumb-subtitle">ORDERS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END WIDGET THUMB -->
+                </div>
+            </div>
 
-                      <div class="form-body">
-                          <div class="alert alert-danger display-hide">
-                              <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
-                          <div class="alert alert-success display-hide">
-                              <button class="close" data-close="alert"></button> Your form validation is successful! </div>
-                          <div class="form-group">
-                              <h4 class="caption-subject bold uppercase font-green-dark">Personal Details</h4>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Name</label>
-                              <div class="col-md-9">
-                                  <input type="text" name="name" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Surname</label>
-                              <div class="col-md-9">
-                                  <input type="text" name="surname" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Email Address</label>
-                              <div class="col-md-9">
-                                  <input type="email" name="email" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Contact Number</label>
-                              <div class="col-md-9">
-                                  <input type="number" name="contact" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <h4 class="caption-subject bold uppercase font-green-dark">Car Details</h4>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Car Manufacturer</label>
-                              <div class="col-md-9">
-                                  <input type="text" name="carmanufacturer" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Car Model</label>
-                              <div class="col-md-9">
-                                  <input type="text" name="carmodel" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Car Colour</label>
-                              <div class="col-md-9">
-                                  <input type="text" name="carcolour" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Number Plate</label>
-                              <div class="col-md-9">
-                                  <input type="text" name="noplate" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <h4 class="caption-subject bold uppercase font-green-dark">Job Details</h4>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Date</label>
-                              <div class="col-md-9">
-                                  <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
-                                      <input type="text" class="form-control" readonly name="datepicker" required="true">
-                                      <span class="input-group-btn">
-                                          <button class="btn default" type="button">
-                                              <i class="fa fa-calendar"></i>
-                                          </button>
-                                      </span>
-                                  </div>
-                                  <!-- /input-group -->
-                                  <span class="help-block"> Select a date </span>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Time</label>
-                              <div class="col-md-9">
-                                  <div class="input-group">
-                                      <input type="text" class="form-control timepicker timepicker-24">
-                                      <span class="input-group-btn">
-                                          <button class="btn default" type="button">
-                                              <i class="fa fa-clock-o"></i>
-                                          </button>
-                                      </span>
-                                  </div>
-                                  <!-- /input-group -->
-                                  <span class="help-block"> Select a time </span>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Location</label>
-                              <div class="col-md-9">
-                                  <input type="text" name="location" required="true" minlength="2" class="form-control" /> </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Washing Type</label>
-                              <div class="col-md-9">
-                                  <select class="form-control" name="options1" required="true">
-                                      <option value="">Select...</option>
-                                      <option value="Option 1">Type 1</option>
-                                      <option value="Option 2">Type 2</option>
-                                      <option value="Option 3">Type 3</option>
-                                      <option value="Option 4">Type 4</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Wax</label>
-                              <div class="col-md-9">
-                                  <select class="form-control" name="options1" required="true">
-                                      <option value="">Select...</option>
-                                      <option value="Option 1">Yes</option>
-                                      <option value="Option 2">No</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">UV Protection</label>
-                              <div class="col-md-9">
-                                  <select class="form-control" name="options1" required="true">
-                                      <option value="">Select...</option>
-                                      <option value="Option 1">Yes</option>
-                                      <option value="Option 2">No</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Cleaner
-                                  <span class="required"> * </span>
-                              </label>
-                              <div class="col-md-9">
-                                  <select class="form-control select2me" name="options2" required="true">
-                                      <option value="">Select...</option>
-                                      <option value="Option 1">Cleaner 1</option>
-                                      <option value="Option 2">Cleaner 2</option>
-                                      <option value="Option 3">Cleaner 3</option>
-                                      <option value="Option 4">Cleaner 4</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Job Status</label>
-                              <div class="col-md-9">
-                                  <select class="form-control" name="options1" required="true">
-                                      <option value="">Select...</option>
-                                      <option value="Option 1">Job Status 1</option>
-                                      <option value="Option 2">Job Status 2</option>
-                                      <option value="Option 3">Job Status 3</option>
-                                      <option value="Option 4">Job Status 4</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Payment Status</label>
-                              <div class="col-md-9">
-                                  <select class="form-control" name="options1" required="true">
-                                      <option value="">Select...</option>
-                                      <option value="Option 1">Payment Status 1</option>
-                                      <option value="Option 2">Payment Status 2</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="control-label col-md-3">Due Date</label>
-                              <div class="col-md-9">
-                                  <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
-                                      <input type="text" class="form-control" readonly name="datepicker" required="true">
-                                      <span class="input-group-btn">
-                                          <button class="btn default" type="button">
-                                              <i class="fa fa-calendar"></i>
-                                          </button>
-                                      </span>
-                                  </div>
-                                  <!-- /input-group -->
-                                  <span class="help-block"> Select a date </span>
-                              </div>
-                          </div>
-                      </div>
+            <div class="row">
+                <div class="col-lg-6 col-xs-12 col-sm-12">
+                    <!-- BEGIN Portlet PORTLET-->
+                    <div class="portlet light">
+                        <div class="portlet-title tabbable-line">
+                            <div class="actions hidden-lg hidden-md hidden-sm" style="width:100%">
+                                <a href="#" class="btn btn-circle btn-icon-only btn-default btn-no-border btncalendar-next-day pull-right"><span class="fa fa-caret-right"></span></a>
+                                <a href="#" class="btn btn-circle btn-icon-only btn-default btn-no-border btncalendar-prev-day pull-left"><span class="fa fa-caret-left"></span></a>
+                            </div>
+                            <div class="clearfix hidden-lg hidden-md hidden-sm"></div>
+                            <div class="caption">
+                                <span class="caption-subject font-dark bold uppercase">Name's Jobs</span>
+                            </div>
+                            <div class="tabbable tabbable-tabdrop">
+                                <ul class="nav nav-tabs nav-tabs-right">
+                                    <li>
+                                        <a href="#"> Year </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Month </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Week </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="appointmets.html"> Today </a>
+                                    </li>
+                                    <li class="margin-right-10 hidden-xs"><a href="#" class="btn btn-circle btn-icon-only btn-default btncalendar-next-day"><span class="fa fa-caret-right"></span></a></li>
+                                    <li class="margin-right-10 hidden-xs"><a href="#" class="btn btn-circle btn-icon-only btn-default btncalendar-prev-day"><span class="fa fa-caret-left"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="table-scrollable">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th> Client's First Name </th>
+                                            <th> Client's Last Name </th>
+                                            <th> Number Plate </th>
+                                            <th> Job Status </th>
+                                            <th> Price </th>
+                                            <th> Job Details </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-danger"> Status 1 </span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-danger"> Status 1 </span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-danger"> Status 1 </span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-info"> Status 3 </span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-info"> Status 3</span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-info"> Status 3</span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-info"> Status 3 </span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-info"> Status 3</span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mark </td>
+                                            <td> Otto </td>
+                                            <td> MRK233 </td>
+                                            <td>
+                                                <span class="label label-sm label-info"> Status 3</span>
+                                            </td>
+                                            <td> €10.50 </td>
+                                            <td>
+                                                <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>   
+                    </div>
+                    <!-- END Portlet PORTLET-->
+                </div>
+                <div class="col-lg-6 col-xs-12 col-sm-12">
+                    <!-- BEGIN Portlet PORTLET-->
+                    <div class="portlet light">
+                        <div class="portlet-title">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> Name Surname</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <!-- BEGIN FORM-->
+                            <form action="#" class="form-horizontal form-row-seperated form-validate">
 
-                      <div class="form-actions">
-                          <div class="row">
-                              <div class="col-md-offset-3 col-md-9">
-                                  <button type="submit" class="btn green-sharp">Save</button>
-                                  <button type="button" class="btn default">Cancel</button>
-                              </div>
-                          </div>
-                      </div>
-                  </form>
-                  <!-- END FORM-->
-              </div>
-          </div>
-          <!-- END Portlet PORTLET-->
-      </div>
-  </div>
-</div>
-<!-- END CONTENT BODY -->
+                                <div class="form-body">
+                                    <div class="alert alert-danger display-hide">
+                                        <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
+                                    <div class="alert alert-success display-hide">
+                                        <button class="close" data-close="alert"></button> Your form validation is successful! </div>
+                                    <div class="form-group">
+                                        <h4 class="caption-subject bold uppercase font-green-dark">Personal Details</h4>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Name</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="name" required="true" minlength="2" class="form-control" /> </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Surname</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="surname" required="true" minlength="2" class="form-control" /> </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Email Address</label>
+                                        <div class="col-md-9">
+                                            <input type="email" name="email" required="true" minlength="2" class="form-control" /> </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Contact Number</label>
+                                        <div class="col-md-9">
+                                            <input type="number" name="contact" required="true" minlength="2" class="form-control" /> </div>
+                                    </div>  
+                                </div>
+
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" class="btn green-sharp">Save</button>
+                                            <button type="button" class="btn default">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- END FORM-->
+                        </div>
+                    </div>
+                    <!-- END Portlet PORTLET-->
+                </div>
+            </div>
+        </div>
+        <!-- END CONTENT BODY -->
