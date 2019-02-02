@@ -14,7 +14,6 @@ export class CleanersListingComponent implements OnInit {
 
   constructor(
     protected activeRoute:ActivatedRoute,
-    protected cleanerservice:CleanersService
   ) {}
 
   ngOnInit() {

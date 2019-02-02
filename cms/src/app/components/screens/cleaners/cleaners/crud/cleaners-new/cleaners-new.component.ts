@@ -36,12 +36,14 @@ export class CleanersNewComponent implements OnInit {
   });
 
 
-  constructor(private cleanerservice:CleanersService,protected activatedRoute:ActivatedRoute,protected router:Router) { }
+  constructor() { }
+
+  // constructor(private cleanerservice:CleanersService,protected activatedRoute:ActivatedRoute,protected router:Router) { }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe((params)=>{
-      this.siteRef = params['siteRef'];
-    })
+    // this.activatedRoute.params.subscribe((params)=>{
+    //   this.siteRef = params['siteRef'];
+    // })
   }
 
   public createJob(post: JobModel) {
