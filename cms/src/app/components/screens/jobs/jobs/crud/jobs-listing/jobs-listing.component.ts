@@ -19,17 +19,19 @@ export class JobsListingComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.activeRoute.params.subscribe((params)=>{
-      this.siteRef = params['siteRef'];
+    // this.activeRoute.params.subscribe((params)=>{
+    //   this.siteRef = params['siteRef'];
       this.getJobs();
+      // alert(this.getJobs())
       // response
-    });
+    // });
   }
   
   private getJobs(){
-    // this.jobService.getJobs(this.siteRef).subscribe((jobs)=>{
-    //   this.jobs = jobs;
-    // });
+    this.jobService.getJobs().subscribe((jobs)=>{
+      this.jobs = jobs;
+      // alert(this.jobs)
+    });
   }
 
   private removeJob(ref)

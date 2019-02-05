@@ -1,11 +1,11 @@
 export interface JobModel {
-  title?: string,
-  content?: string;
-  ref?: string;
-  image_url?:string;
-  status?:string;
-  site_ref?:string;
-  slug?:string;
-  meta_keywords?:string;
-  meta_description?:string;
+  name?: string,
+  date?: string;
+  time?: string;
+  location?:string;
+  location_lat?:string;
+  location_lng?:string;
+  type_ref?:string;
+  status_ref?:string;
+  vehicle_ref?:string;
 }

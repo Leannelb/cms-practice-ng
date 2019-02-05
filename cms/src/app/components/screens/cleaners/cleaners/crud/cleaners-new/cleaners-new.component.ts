@@ -88,6 +88,6 @@ export class CleanersNewComponent implements OnInit {
       site_ref   : this.siteRef
     };
 
-    return this.createJob(post);
+    // return this.createJob();
   }
 }

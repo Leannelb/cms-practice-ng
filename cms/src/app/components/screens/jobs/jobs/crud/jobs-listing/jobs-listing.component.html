@@ -73,8 +73,8 @@
                   <div class="table-scrollable">
                       <table class="table table-bordered table-hover">
                           <thead>
-                              <tr>
-                                  <th> First Name </th>
+                                <tr>
+                                  <th> Name </th>
                                   <th> Last Name </th>
                                   <th> Number Plate </th>
                                   <th> Job Status </th>
@@ -84,8 +84,8 @@
                               </tr>
                           </thead>
                           <tbody>
-                              <tr>
-                                  <td> Mark </td>
+                              <tr *ngFor="let job of jobs">
+                                  <td> {{job.name }} </td>
                                   <td> Otto </td>
                                   <td> MRK233 </td>
                                   <td>
@@ -97,97 +97,7 @@
                                       <a [routerLink]="['/jobs/details']" class="btn green-sharp btn-xs"> View Details </a>
                                   </td>
                               </tr>
-                              <tr>
-                                  <td> Larry </td>
-                                  <td> Cooper </td>
-                                  <td> LCR876 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Joseph Bonnici </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Mary </td>
-                                  <td> Saliba </td>
-                                  <td> MRS234 </td>
-                                  <td>
-                                      <span class="label label-sm label-info "> Status 3 </span>
-                                  </td>
-                                  <td> Isaac Bonello </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Elisa </td>
-                                  <td> Calleja </td>
-                                  <td> ELE124 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Adolf Cassar </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Mark </td>
-                                  <td> Otto </td>
-                                  <td> MRK233 </td>
-                                  <td>
-                                      <span class="label label-sm label-danger"> Status 1 </span>
-                                  </td>
-                                  <td> - </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Larry </td>
-                                  <td> Cooper </td>
-                                  <td> LCR876 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Joseph Bonnici </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Mary </td>
-                                  <td> Saliba </td>
-                                  <td> MRS234 </td>
-                                  <td>
-                                      <span class="label label-sm label-info "> Status 3 </span>
-                                  </td>
-                                  <td> Isaac Bonello </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td> Elisa </td>
-                                  <td> Calleja </td>
-                                  <td> ELE124 </td>
-                                  <td>
-                                      <span class="label label-sm label-warning"> Status 2 </span>
-                                  </td>
-                                  <td> Adolf Cassar </td>
-                                  <td> €10.50 </td>
-                                  <td>
-                                      <a href="jobs_details.html" class="btn green-sharp btn-xs"> View Details </a>
-                                  </td>
-                              </tr>
+                             
                           </tbody>
                       </table>
                   </div>
