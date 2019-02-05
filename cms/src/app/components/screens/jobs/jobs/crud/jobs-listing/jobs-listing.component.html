@@ -86,10 +86,10 @@
                           <tbody>
                               <tr *ngFor="let job of jobs">
                                   <td> {{job.name }} </td>
-                                  <td> Otto </td>
-                                  <td> MRK233 </td>
+                                  <td> Last Name </td>
+                                  <td> {{ job.vehicle_ref }} </td>
                                   <td>
-                                      <span class="label label-sm label-danger"> Status 1 </span>
+                                      <span class="label label-sm label-danger"> {{ job.status_ref }} </span>
                                   </td>
                                   <td> - </td>
                                   <td> €10.50 </td>

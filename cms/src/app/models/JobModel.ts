@@ -1,11 +1,15 @@
 export interface JobModel {
-  name?: string,
-  date?: string;
-  time?: string;
-  location?:string;
-  location_lat?:string;
-  location_lng?:string;
-  type_ref?:string;
-  status_ref?:string;
-  vehicle_ref?:string;
-}
+        ref: string;
+        date: string;
+        time: string;
+        location: string;
+        location_lat?: string;
+        location_lng?: any;
+        status: string;
+        status_ref: string;
+        type?: string;
+        type_ref?: string;
+        name: string;
+        surname: string;
+    }
+
