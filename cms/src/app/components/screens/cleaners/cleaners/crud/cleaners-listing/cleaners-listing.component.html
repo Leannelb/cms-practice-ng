@@ -54,13 +54,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td> Mark </td>
-                                    <td> Otto </td>
+                            <tr *ngFor="let cleaner of cleaners">
+                                    <td> {{ cleaner.name }} </td>
+                                    <td> {{ cleaner.surname }} </td>
                                     <td>
                                         <span class="label label-sm label-danger"> Unavailable </span>
                                     </td>
-                                    <td> 3 </td>
+                                    <td> {{ cleaner.past_jobs }} </td>
                                     <td> 60 min available </td>
                                     <td> 20 min unavailable </td>
                                     <td> 10 </td>
