@@ -12,93 +12,37 @@
         <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
         <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
         <ul class="page-sidebar-menu page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-            <li class="nav-item start active open">
-                <a href="index.html" class="nav-link nav-toggle">
+            <li class="nav-item start">
+                <a class="nav-link nav-toggle" routerLink="/" [routerLinkActive]="['open', 'active']">
                     <i class="icon-home"></i>
                     <span class="title">Dashboard</span>
                     <span class="selected"></span>
                     <span class="arrow open"></span>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item " routerLink="/jobs" [routerLinkActive]="['open', 'active']">
                 <a [routerLink]="['/jobs']" class="nav-link nav-toggle">
                     <i class="icon-user"></i>
                     <span class="title">Jobs</span>
                     <span class="arrow"></span>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li routerLink="/cleaners"  [routerLinkActive]="['open', 'active']" class="nav-item " >
                 <a [routerLink]="['/cleaners']" class="nav-link nav-toggle">
                     <i class="icon-calendar"></i>
                     <span class="title">Cleaners</span>
                     <span class="arrow"></span>
                 </a>
             </li>
-            <li class="nav-item ">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="icon-book-open"></i>
-                    <span class="title">PMR</span>
+            <li  [routerLinkActive]="['open', 'active']" class="nav-item ">
+                <a  class="nav-link nav-toggle">
+                    <i class="icon-calendar"></i>
+                    <span class="title">Transactions</span>
                     <span class="arrow"></span>
                 </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="pmr.html" class="nav-link ">
-                            <span class="title">Personal Details</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_2.html" class="nav-link ">
-                            <span class="title">Health Profile</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_3.html" class="nav-link ">
-                            <span class="title">Medication Profile</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_4.html" class="nav-link ">
-                            <span class="title">Blood Glucose</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_5.html" class="nav-link ">
-                            <span class="title">Blood Pressure</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_6.html" class="nav-link ">
-                            <span class="title">Cholesterol</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_7.html" class="nav-link ">
-                            <span class="title">Blood Tests</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_8.html" class="nav-link ">
-                            <span class="title">BMI</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="pmr_9.html" class="nav-link ">
-                            <span class="title">Spirometry</span>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="pmr_10.html" class="nav-link ">
-                            <span class="title">Pharmaceutical Care Plan</span>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="pmr_11.html" class="nav-link ">
-                            <span class="title">Notes</span>
-                        </a>
-                    </li>
-                </ul>
             </li>
-            <li class="nav-item  ">
+        
+            <!-- <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-settings"></i>
                     <span class="title">System</span>
@@ -140,9 +84,8 @@
                         <a href="login.html" class="nav-link ">
                             <span class="title">Login</span>
                         </a>
-                    </li>
-                </ul>
-            </li>
+                    </li> -->
+   
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>
@@ -150,36 +93,3 @@
 </div>
 <!-- END SIDEBAR -->
 
-
-
-<!-- <div class="page-sidebar-wrapper">
-
-  <div class="page-sidebar navbar-collapse collapse">
-      
-      <ul class="page-sidebar-menu page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200"  *ngIf="sideBarItems != null && sideBarItems.length > 0"> 
-          <li class="nav-item start">
-              <a href="/" class="nav-link nav-toggle" routerLink="/" [routerLinkActive]="['open', 'active']">
-                  <i class="icon-home"></i>
-                  <span class="title">Dashboard</span>
-                  <span class="selected"></span>
-                  <span class="arrow open"></span>
-              </a>
-          </li>
-          <!-- <li class="nav-item ">
-              <a href="/tours" class="nav-link nav-toggle">
-                  <i class="icon-user"></i>
-                  <span class="title">Tours</span>
-                  <span class="arrow"></span>
-              </a>
-          </li> 
-
-          <li class="nav-item"  *ngFor="let sideBarItem of sideBarItems" [routerLink]="[sideBarItem.link]" [routerLinkActive]="['open', 'active']"   >
-            <a [routerLink]="[sideBarItem.link]" class="nav-link nav-toggle">
-                <i class="{{sideBarItem.icon}}"></i>
-                <span class="title">{{sideBarItem.name}}</span>
-                <span class="arrow"></span>
-            </a>
-          </li>
-      </ul>
-  </div>
-</div> -->
