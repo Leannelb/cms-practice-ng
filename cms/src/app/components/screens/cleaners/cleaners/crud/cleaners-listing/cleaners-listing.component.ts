@@ -20,18 +20,15 @@ export class CleanersListingComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-  //   this.activeRoute.params.subscribe((params)=>{
-  //     this.getCleaners();
-  //     // response
-  //   });
-  // }
-  
-  // private getCleaners(){
-  //   this.cleanerservice.getCleaners().subscribe((cleaners)=>{
-  //     this.cleaners = cleaners;
-  //   });
+    this.getCleaners() ;
+    
   }
 
+  getCleaners() {
+    this.cleanerservice.getCleaners().subscribe((cleaners) =>{
+        this.cleaners = cleaners;
+    });
+  }
   private removeJob(ref)
   {
     // this.cleanerservice.removeJob(ref).subscribe((cleaners)=>{

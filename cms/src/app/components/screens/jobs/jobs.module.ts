@@ -17,7 +17,9 @@ const routes: Routes = [
   imports: [ RouterModule.forChild(routes),
     CommonModule,
   ],
-  exports: [ RouterModule ],
+  exports: [ 
+    RouterModule 
+  ],
   declarations: [
     JobsListingComponent,
     JobsEditComponent,

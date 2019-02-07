@@ -14,7 +14,6 @@ import { Observable } from 'rxjs';
 export class JobsService {
 
   public jobs:Observable<Array<JobModel>>;
-
   private serverUrl = Constants.SERVER_URL;
 
   constructor(private httpClient: HttpAuthService) { }
