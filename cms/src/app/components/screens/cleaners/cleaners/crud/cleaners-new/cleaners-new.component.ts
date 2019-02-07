@@ -48,14 +48,6 @@ export class CleanersNewComponent implements OnInit {
 
   public createJob(post: JobModel) {
     // return this.Cleanerservice.createJob(post).subscribe(response => {
-    //   // alert('ok');
-    //   this.router.navigate(['/Cleaners/listing',this.siteRef]);
-    // //   console.log(response);
-    // },
-    //   error => {
-    //   // alert('error');
-    //     console.log(error);
-    //   });
   }
 
 

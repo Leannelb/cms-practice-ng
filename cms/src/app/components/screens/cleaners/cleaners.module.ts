@@ -10,7 +10,6 @@ const routes: Routes = [
   { path: '', component: CleanersListingComponent },
   { path: 'details/:ref', component: CleanersEditComponent },
   { path: 'new', component: CleanersNewComponent },
-  { path: 'map', component: CleanersMapComponent },
 
 
 ]
